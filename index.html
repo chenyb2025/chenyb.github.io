@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>浙江正泰电器股份有限公司工业化部数据</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin-top: 50px;
+    }
+    #login {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    input[type="password"] {
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 200px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div id="login">
+    <h2>浙江正泰电器股份有限公司工业化部数据</h2>
+    <p>请输入密码查看数据：</p>
+    <input type="password" id="password" placeholder="输入密码">
+    <button onclick="checkPassword()">提交</button>
+  </div>
+  <div id="report" style="display:none;">
+    <!-- https://app.powerbi.com/reportEmbed?reportId=079b8974-cbdc-4b77-bbbc-79fc214d62cb&autoAuth=true&ctid=3bda7113-3e71-4c70-b888-7723cb30791c -->
+    <iframe width="100%" height="600" src="你的Power BI嵌入链接" frameborder="0"></iframe>
+  </div>
+  <script>
+    function checkPassword() {
+      if (document.getElementById('password').value === '1501215') {
+        document.getElementById('login').style.display = 'none';
+        document.getElementById('report').style.display = 'block';
+      } else {
+        alert('密码错误，请重试！');
+      }
+    }
+  </script>
+</body>
+</html>
